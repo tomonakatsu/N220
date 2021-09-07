@@ -14,6 +14,9 @@ function draw() {
 
 function mousePressed() {
   if (sqSize <= 100){
-    sqSize += 1;
+    sqSize += 5;
   }
 }
+
+
+
