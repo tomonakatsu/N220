@@ -17,7 +17,7 @@ function setup(){
     fill(0, 33, 71);
     rect(50,50,494, 350);
 
-    //4black lines as a flame
+    //4 black lines as a flame
     stroke(0);
     strokeWeight(10);
     line(50,50,1285,50);
@@ -26,6 +26,7 @@ function setup(){
     line(1285,50,1285,700);
 }
 
+//create circles in a specific range
 function draw(){
     stroke(2187, 19, 61);
     strokeWeight(5);
