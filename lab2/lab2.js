@@ -16,6 +16,9 @@ function mousePressed() {
   if (sqSize <= 100){
     sqSize += 5;
   }
+  else{
+      sqSize=0;
+  }
 }
 
 
