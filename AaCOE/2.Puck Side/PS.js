@@ -10,7 +10,7 @@ function draw() {
 
   fill(sqColor);
   circle(mouseX, mouseY, sqSize);
-  if(mouseX <= 200){
+  if(mouseX <= width/2){
       sqColor = "#0000FF";
   }
   else{
