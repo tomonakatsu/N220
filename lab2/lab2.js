@@ -20,6 +20,3 @@ function mousePressed() {
       sqSize=0;
   }
 }
-
-
-
