@@ -9,8 +9,8 @@ function draw() {
   background(0);
 
   fill(sqColor);
-  x = width-mouseX;
-  y = height-mouseY;
+  x = width - mouseX;
+  y = height - mouseY;
   circle(x, y, sqSize);
 
 }
