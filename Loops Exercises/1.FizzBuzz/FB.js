@@ -7,7 +7,7 @@ let adjust = sqSize/2;
 
 function setup(){
   createCanvas(1250, 200);
-  //counter to count the position of the fifure
+  //counter to count the position of the figure
   let count = 1;
   for (let i = sqSize; i < width; i = i + (width/circleNum)) {
     if(count % 3 == 0 && count % 5 == 0){
