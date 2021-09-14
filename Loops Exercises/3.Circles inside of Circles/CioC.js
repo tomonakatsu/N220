@@ -1,6 +1,4 @@
 let diam =400;
-let sqSize = 50;
-let sqColor = "#FFA500";
 
 function setup() {
     createCanvas(400, 400);

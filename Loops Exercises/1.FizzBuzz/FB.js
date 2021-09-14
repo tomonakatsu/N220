@@ -11,16 +11,16 @@ function setup(){
   let count = 1;
   for (let i = sqSize; i < width; i = i + (width/circleNum)) {
     if(count % 3 == 0 && count % 5 == 0){
-      fill("#0000FF");
-      rect(i-adjust, 100-adjust, sqSize, sqSize);
+      fill(0,0,255);
+      square(i-adjust, 100-adjust, sqSize);
     }
     else if(count % 3 == 0){
-      fill("#800080");
+      fill(128, 0, 128);
       circle(i, 100, sqSize);
     }
     else if(count % 5 == 0){
-      fill("#00FF00");
-      rect(i - adjust, 100 - adjust, sqSize, sqSize)
+      fill(0,255,0);
+      square(i - adjust, 100 - adjust, sqSize)
     }
     else{
       fill(0);
