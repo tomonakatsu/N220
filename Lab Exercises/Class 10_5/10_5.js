@@ -10,6 +10,7 @@ for(let i = 0; i < 20; i++) {
 
 console.log("");
 
+//first button
 function age(){
     for(let i = 0; i < meeples.length; i++) {
         meeples[i].age ++;
@@ -27,11 +28,20 @@ function age(){
     console.log(" ");
 }
 
+
+//second button
 function show(){
-    for(let i = 0; i < meeples.length ; i++){
-        document.write(meeples[i] + "<br >");
-    }
+    meeplesId.innerHTML = JSON.stringify(meeples, null, 2);
+    meeples = [];
 }
+
+
+//third button
+function add(){
+    meeplesId.innerHTML = "";
+    meeples.push()
+}
+
 //log out the contents of meeples.. what is in it?
 
 //When a button is pressed
