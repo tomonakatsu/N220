@@ -31,7 +31,7 @@ function age(){
 
 //second button
 function show(){
-    meeplesId.innerHTML = JSON.stringify(meeples, null, 2);
+    meeplesId.innerHTML = JSON.stringify(meeples, null, 1);
     meeples = [];
 }
 
