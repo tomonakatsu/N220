@@ -1,5 +1,5 @@
 let ball = {Size: 75, Color: "#a1eb46", xPos: -5, yPos: -5, x: 400, y: 300};
-let paddle = {Width: 30, Height: 100, Color: "#a1eb46", x: 600}
+let paddle = {Width: 30, Height: 100, Color: "#FF0000", x: 600}
 
 function setup() {
   createCanvas(800, 600);
@@ -7,9 +7,10 @@ function setup() {
 
 function draw() {
     background(0);
+    paddle_y = mouseY;
   
     fill(paddle.Color);
-    rect(paddle.x, mouseY, paddle.Width, paddle.Height);
+    rect(paddle.x, paddle_y, paddle.Width, paddle.Height);
 
     fill(ball.Color);
     circle(ball.x, ball.y, ball.Size);
@@ -32,8 +33,7 @@ function draw() {
         ball.yPos *= -1;
     }
 
-    y = mouseY;
-    if(ball.x + ball.Size / 2 >= paddle.x && ball.y > y && ball.y < y + paddle.Width){
+    if(ball.x + (ball.Size / 2) >= paddle.x && ball.y > paddle_y && ball.y < paddle_y + paddle.Width){
         ball.xPos *= -1;
         ball.yPos *= -1;
     }
