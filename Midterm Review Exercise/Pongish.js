@@ -1,4 +1,4 @@
-let ball = {Size: 75, Color: "#a1eb46", xPos: -10, yPos: -10, x: 400, y: 300};
+let ball = {Size: 75, Color: "#a1eb46", xPos: -5, yPos: -5, x: 400, y: 300};
 let paddle = {Width: 30, Height: 100, Color: "#a1eb46", x: 600}
 
 function setup() {
