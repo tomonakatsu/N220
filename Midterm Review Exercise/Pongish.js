@@ -1,5 +1,5 @@
-let ball = {Size: 75, Color: "#a1eb46", xPos: -5, yPos: -5, x: 400, y: 300};
-let paddle = {Width: 30, Height: 100, Color: "#FF0000", x: 600}
+let ball = {Size: 75, Color: "#00FF00", xPos: -5, yPos: -5, x: 400, y: 300};
+let paddle = {Width: 30, Height: 120, Color: "#FF0000", x: 600}
 
 function setup() {
   createCanvas(800, 600);
@@ -33,7 +33,8 @@ function draw() {
         ball.yPos *= -1;
     }
 
-    if(ball.x + (ball.Size / 2) >= paddle.x && ball.y > paddle_y && ball.y < paddle_y + paddle.Width){
+    if(ball.x + (ball.Size / 2) >= paddle.x && ball.x + (ball.Size / 2) <= paddle.x + paddle.Width
+        && ball.y > paddle_y && ball.y < paddle_y + paddle.Height){
         ball.xPos *= -1;
         ball.yPos *= -1;
     }
