@@ -29,13 +29,13 @@ function draw() {
     if (ball.x > 800){
         ball.x = width/2;
         ball.y = height/2;
-        ball.xPos *= -1;
-        ball.yPos *= -1;
+        ball.xPos = -5;
+        ball.yPos = -5;
     }
 
     if(ball.x + (ball.Size / 2) >= paddle.x && ball.x + (ball.Size / 2) <= paddle.x + paddle.Width
         && ball.y > paddle_y && ball.y < paddle_y + paddle.Height){
-        ball.xPos *= -1;
-        ball.yPos *= -1;
+        ball.xPos *= -1.15;
+        ball.yPos *= -1.15;
     }
 }
