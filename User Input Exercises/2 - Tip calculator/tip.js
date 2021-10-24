@@ -6,24 +6,24 @@ function doThing(){
     let num = parseInt(txtNumber.value);
 
     //calculate the tip when it is 10%
-    let ten = num * .1;
+    let tenTip = num * .1;
     //total
     let tenTotal = num + ten;
     //show the result
-    console.log("10% Tip: $" + ten + ". Total: $" + tenTotal);
+    console.log("10% Tip: $" + tenTip + ". Total: $" + tenTotal);
 
     //calculate the tip when it is 15%
-    let fifteen = num * .15;
+    let fifteenTip = num * .15;
     //total
     let fifTotal = num + fifteen;
     //show the result
-    console.log("15% Tip: $" + fifteen + ". Total: $" + fifTotal);
+    console.log("15% Tip: $" + fifteenTip + ". Total: $" + fifTotal);
 
     //calculate the tip when it is 20%
-    let twenty = num * .2;
+    let twentyTip = num * .2;
     //total
     let twentyTotal = num +twenty;
-    //show the result
-    console.log("20% Tip: $" + twenty + ". Total: $" + twentyTotal);
+
+    console.log("20% Tip: $" + twentyTip + ". Total: $" + twentyTotal);
 
 }
