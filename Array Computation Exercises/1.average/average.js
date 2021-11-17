@@ -4,7 +4,7 @@ let sum_message = document.getElementById("message2");
 
 
 function doThing(){
-    let stringVector = txtString.value; //"10,15"
+    let stringVector = txtString.value;
     let arVector = stringVector.split(",");
     let output_sum = sum(arVector);
     let output_average = average(output_sum, arVector);

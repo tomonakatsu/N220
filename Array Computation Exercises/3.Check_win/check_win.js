@@ -1,7 +1,6 @@
 let txtString = document.getElementById("txtString");
 let output = document.getElementById("message");
 
-
 function doThing(){
     let stringVector = txtString.value;
     let arVector = stringVector.split(",");

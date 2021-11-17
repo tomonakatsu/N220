@@ -2,12 +2,10 @@ let txtString = document.getElementById("txtString");
 let result = document.getElementById("message1");
 let result_number = document.getElementById("message2");
 
-
 function doThing(){
     let stringVector = txtString.value;
     let arVector = stringVector.split(" ");
     let num = checker(arVector);
-    console.log(num);
 
     if(num == 0){
         result.innerHTML = "There were no bad word";
@@ -17,6 +15,7 @@ function doThing(){
         result.innerHTML = "Bad words were found";
         result_number.innerHTML = "The number of bad words: " + num;
     }
+    txtString.value = "";
 }
 
 function checker(arVector){
