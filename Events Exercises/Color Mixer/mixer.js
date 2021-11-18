@@ -37,7 +37,7 @@ function change_green(event){
     message.innerHTML = "current color: rgb(" + r + "," + g + "," + b + ")";
 }
 
-//click blue
+//click red
 function change_blue(event){
     let response = event.target.getAttribute("data-response");
     b = b + parseInt(response);
