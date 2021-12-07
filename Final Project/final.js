@@ -26,7 +26,7 @@ function flip(event){
     }
     //second card
     else{
-        //check if the cards match
+        //if two revealed cards match
         if(prevDiv == event.target.dataset.cardnum){
             //remove the card
             event.target.style.backgroundColor = "white";
@@ -34,10 +34,11 @@ function flip(event){
             counter_score ++;
             counter = 1;
 
-            //ficnd the first card and remove it as well
+            //find the first card and remove it as well
             let check = event.target.dataset.cardnum;
             checker(check);
         }
+        //if two reveal cards do not mcuh
         else{
             counter_score ++;
             counter = 1;
@@ -53,6 +54,7 @@ function flip(event){
     }
 }
 
+//huffle the numbers
 function shuffle(array){
     for(let i = 0; i < array.length; i++){
         let j = Math.floor(Math.random() * i);
@@ -62,6 +64,7 @@ function shuffle(array){
     }
 }
 
+//find the first card which has the same number as the second card
 function checker(check){
     var card = document.getElementsByClassName("card");
     for(var i = 0; i < card.length; i++)
