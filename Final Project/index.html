@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .range{
+            width: 450px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            float: left;
+            background-color: black;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Final project</h1>
+
+    <div class="range">
+        <h2>Concentration</h2>
+
+        <div class="card" onclick = "flip(event)" data-number =1 data-cardnum =""></div>
+        <div class="card" onclick = "flip(event)" data-number =2 data-cardnum =""></div>        
+        <div class="card" onclick = "flip(event)" data-number =3 data-cardnum =""></div>       
+        <div class="card" onclick = "flip(event)" data-number =4 data-cardnum =""></div>     
+            
+        <div class="card" onclick = "flip(event)" data-number =5 data-cardnum =""></div>
+        <div class="card" onclick = "flip(event)" data-number =6 data-cardnum =""></div>        
+        <div class="card" onclick = "flip(event)" data-number =7 data-cardnum =""></div>       
+        <div class="card" onclick = "flip(event)" data-number =8 data-cardnum =""></div>  
+            
+        <div class="card" onclick = "flip(event)" data-number =9 data-cardnum =""></div>
+        <div class="card" onclick = "flip(event)" data-number =10 data-cardnum =""></div>        
+        <div class="card" onclick = "flip(event)" data-number =11 data-cardnum =""></div>       
+        <div class="card" onclick = "flip(event)" data-number =12 data-cardnum =""></div>  
+            
+        <div class="card" onclick = "flip(event)" data-number =13 data-cardnum =""></div>
+        <div class="card" onclick = "flip(event)" data-number =14 data-cardnum =""></div>        
+        <div class="card" onclick = "flip(event)" data-number =15 data-cardnum =""></div>       
+        <div class="card" onclick = "flip(event)" data-number =16 data-cardnum =""></div>
+
+        <div id="message"></div>
+        <input type="button" value="replay" onclick="location.reload(true)"></input>
+    </div>
+
+
+    <script src="final.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" ></script>
+    
+</body>
+</html>
