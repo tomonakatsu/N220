@@ -1,5 +1,5 @@
 let message = document.getElementById("message");
-var array = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
+var array = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
 let counter_complete = 0;   //to check if the user finished the game
 let counter = 1;            //to check if it is the first or second card
 let counter_score = 0;      //to check how many paires of hands the user fliped
@@ -20,23 +20,28 @@ function flip(event){
         event.target.innerHTML = "";
     }, 2000);
 
-    //first card
+    //check if it is first card
     if(counter == 1){
         counter ++;
     }
-    //second card
+    //check if it second card
     else{
         //if two revealed cards match
         if(prevDiv == event.target.dataset.cardnum){
             //remove the card
-            event.target.style.backgroundColor = "white";
+            setTimeout(function(){
+                event.target.style.backgroundColor = "white";
+            }, 1500);
+
             counter_complete ++;
             counter_score ++;
             counter = 1;
 
             //find the first card and remove it as well
             let check = event.target.dataset.cardnum;
-            checker(check);
+            setTimeout(function(){
+                checker(check);
+            }, 1500);
         }
         //if two reveal cards do not mcuh
         else{
