@@ -4,6 +4,7 @@ let counter_complete = 0;   //to check if the user finished the game
 let counter = 1;            //to check if it is the first or second card
 let counter_score = 0;      //to check how many paires of hands the user fliped
 
+
 shuffle(array);
 
 function flip(event){
@@ -14,22 +15,28 @@ function flip(event){
     //show the number
     event.target.innerHTML = event.target.dataset.cardnum;
     
-
+    //delete the number in 2 seconds
     setTimeout(function(){
         event.target.innerHTML = "";
     }, 2000);
 
+    //first card
     if(counter == 1){
         counter ++;
     }
+    //second card
     else{
-        console.log("precolor" + preColor + " preDiv" + prevDiv);
+        //check if the cards match
         if(prevDiv == event.target.dataset.cardnum){
+            //remove the card
             event.target.style.backgroundColor = "white";
-
             counter_complete ++;
             counter_score ++;
             counter = 1;
+
+            //ficnd the first card and remove it as well
+            let check = event.target.dataset.cardnum;
+            checker(check);
         }
         else{
             counter_score ++;
@@ -37,14 +44,14 @@ function flip(event){
         }
     }
 
+    //remoember the previous card number
     prevDiv = event.target.dataset.cardnum;
-    preColor = event.target.style.backgroundColor;
 
+    //check if the user finished the game
     if(counter_complete == 8){
         message.innerHTML = "Congratulations!! You took " + counter_score + " turns!"; 
     }
 }
-
 
 function shuffle(array){
     for(let i = 0; i < array.length; i++){
@@ -52,5 +59,15 @@ function shuffle(array){
         let temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+}
+
+function checker(check){
+    var card = document.getElementsByClassName("card");
+    for(var i = 0; i < card.length; i++)
+    {
+        if(card[i].dataset.cardnum == check){
+            card[i].style.backgroundColor = "white";
+        }
     }
 }
