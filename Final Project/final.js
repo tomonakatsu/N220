@@ -1,5 +1,5 @@
 let message = document.getElementById("message");
-var array = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
+var array = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 let counter_complete = 0;   //to check if the user finished the game
 let counter = 1;            //to check if it is the first or second card
 let counter_score = 0;      //to check how many paires of hands the user fliped
@@ -55,7 +55,9 @@ function flip(event){
 
     //check if the user finished the game
     if(counter_complete == 8){
-        message.innerHTML = "Congratulations!! You took " + counter_score + " turns!"; 
+        setTimeout(function(){
+            message.innerHTML = "Congratulations!! You took " + counter_score + " turns!"; 
+        }, 1500);
     }
 }
 
